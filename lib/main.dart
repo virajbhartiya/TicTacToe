@@ -83,8 +83,8 @@ class _HomePageState extends State<HomePage> {
             flex: 3,
             child: GridView.builder(
               itemCount: 9,
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3),
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () {
@@ -92,12 +92,13 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey[700]),
+                      border: Border.all(color: const Color(0xFFE0E0E0)),
                     ),
                     child: Center(
                       child: Text(
                         displayXO[index],
-                        style: TextStyle(color: Colors.white, fontSize: 40),
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 40),
                       ),
                     ),
                   ),
@@ -216,7 +217,7 @@ class _HomePageState extends State<HomePage> {
       setState(
         () {
           c = 0;
-          dScore+=1;
+          dScore += 1;
         },
       );
     }
